@@ -1,0 +1,74 @@
+# distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# package directories
+jspm_packages
+/node_modules
+
+# serverless directories
+.serverless
+
+# testing
+/coverage
+
+# production
+/build
+
+# temporary directories
+/tmp/*
+/src/tmp
+!/tmp/README.md
+
+# misc
+.DS_Store
+
+# environment files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+env*
+.env*
+
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/dist/
+
+# build
+.webpack
+.build
+
+# vim settings
+.rootdir
+*.swp
+
+# exclude logs
+*.log
+
+# exclude webstorm and idea files
+.idea
+*.iml
+
+# exclude sublime project files
+*.sublime-*
+
+# exclude unused coverage information
+.nyc_output
+coverage.lcov
