@@ -46,7 +46,7 @@ def generate(event, context):
         max_tokens=150,
         top_p=1,
         presence_penalty=0.6,
-        stop=[" Human:", " AI:"]
+        stop=["Student:"]
     )
 
     # return the response
