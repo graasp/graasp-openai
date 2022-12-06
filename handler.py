@@ -6,7 +6,7 @@ import openai
 # get environment variables
 DEBUG = os.getenv("DEBUG", False)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-MODEL = os.getenv("", "code-davinci-002")
+MODEL = os.getenv("MODEL", "code-davinci-002")
 
 # set openai api key
 openai.api_key = OPENAI_API_KEY
