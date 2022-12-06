@@ -6,6 +6,7 @@ import openai
 # get environment variables
 DEBUG = os.getenv("DEBUG", False)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+MODEL = os.getenv("", "code-davinci-002")
 
 # set openai api key
 openai.api_key = OPENAI_API_KEY
@@ -38,13 +39,13 @@ def generate(event, context):
             'body': json.dumps({'message': 'prompt is undefined'})
         }
 
-    response = openai.Completion.create(model="code-davinci-002",
+    response = openai.Completion.create(model=MODEL,
                                         prompt=prompt,
                                         temperature=0.9,
                                         max_tokens=150,
                                         top_p=1,
                                         presence_penalty=0.6,
-                                        stop=["Student:"])
+                                        stop=["Student:", "Étudiant:"])
 
     # return the response
     return {
