@@ -4,9 +4,10 @@ import logging
 import openai
 
 # get environment variables
-DEBUG = os.getenv("DEBUG", False)
+DEBUG = os.getenv("DEBUG", None)
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 MODEL = os.getenv("MODEL", "code-davinci-002")
+ORIGIN = os.getenv("ORIGIN", "*")
 
 # set openai api key
 openai.api_key = OPENAI_API_KEY
@@ -50,7 +51,7 @@ def generate(event, context):
     # return the response
     return {
         'headers': {
-            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Origin': ORIGIN,
             'Access-Control-Allow-Credentials': True,
         },
         'statusCode': 200,

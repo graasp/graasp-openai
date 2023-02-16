@@ -13,6 +13,7 @@ provider:
     OPENAI_API_KEY: ${file(./env.${sls:stage}.json):OPENAI_API_KEY}
     DEBUG: ${file(./env.${sls:stage}.json):DEBUG}
     MODEL: ${file(./env.${sls:stage}.json):MODEL}
+    ORIGIN: ${file(./env.${sls:stage}.json):ORIGIN}
   httpApi:
     cors: true
 
